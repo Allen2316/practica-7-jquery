@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <p class="navbar-brand">Luis Sarmiento</p>
+        </nav>
+    </header>
+
+
+
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-end mb-2">
+                    <button class="btn btn-success btnagregar" data-toggle="modal" data-target="#modalAgregar">Agregar</buttton>
+                </div>
+                <div class="modal fade" id="modalAgregar" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitulo">Agregar</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mensajeBody">
+                                <!-- Aqui va ir el form pero puesto por ajax -->
+                            </div>
+                            <div class="modal-footer piemodal">
+                                <!-- aqui va a cambiar el boton -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr class="text-center">
+                                <td>Nombres</td>
+                                <td>Apellidos</td>                                
+                                <td>Editar</td>
+                                <td>Borrar</td>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-tabla" class="text-center mx-auto">
+                            <!-- cuerpo de tabla se llena en app.js -->
+                        </tbody>
+                    </table>
+                    <div class="modal fade" id="modalEliminacion" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitulo">Eliminar</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>¿Está seguro de eliminar este registro?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="modalEliminar btn btn-danger"
+                                        data-dismiss="modal">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitulo">Edicion</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="form-edicion">
+                                        <input type="hidden" name="ID-user1" id="ID-user1">
+                                        <div class="form-group row px-4">
+                                            <input type="text" class="form-control" name="nombre1" id="nombre1"
+                                                required>
+                                        </div>
+                                        <div class="form-group row px-4">
+                                            <input type="text" class="form-control" name="apellido1" id="apellido1"
+                                                required>
+                                        </div>
+                                        <div class="form-group row px-4">
+                                            <button type="button" class="btn btn-secondary mr-2"
+                                                data-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="actualizar btn btn-success "
+                                                data-dismiss="modal">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src=" js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper-core-1.16.0/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
